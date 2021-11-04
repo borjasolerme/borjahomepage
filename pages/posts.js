@@ -1,4 +1,4 @@
-import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
@@ -43,6 +43,7 @@ const Posts = () => (
       <Section delay={0.5}>
         
       </Section>
+      <Divider mb={6} mt={16} />
     </Container>
   </Layout>
 )

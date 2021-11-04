@@ -8,6 +8,7 @@ import {
   Button,
   List,
   ListItem,
+  Divider,
   Icon,
   useColorModeValue
 } from '@chakra-ui/react'
@@ -33,7 +34,7 @@ const Home = () => (
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Hello, I&apos;m a product manager/designer from Spain!
+        Hello, I&apos;m a product maker from Spain!
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -80,6 +81,13 @@ const Home = () => (
           </a>
           .
         </Paragraph>
+        <Box align="center" my={8}>
+          <NextLink href="/works">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              Work
+            </Button>
+          </NextLink>
+        </Box>
       </Section>
 
       <Section delay={0.2}>
@@ -93,6 +101,10 @@ const Home = () => (
         <BioSection>
           <BioYear>2012</BioYear>
           Started studies in Business Administratrion
+        </BioSection>
+        <BioSection>
+          <BioYear>2017</BioYear>
+          👔 Tech consultant at Deloitte and a Proptech sideproject 🛏
         </BioSection>
         <BioSection>
           <BioYear>2018</BioYear>
@@ -184,6 +196,7 @@ const Home = () => (
           </NextLink>
         </Box>
       </Section>
+      <Divider mb={6} mt={12} />
     </Container>
   </Layout>
 )

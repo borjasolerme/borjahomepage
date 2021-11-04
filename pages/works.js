@@ -1,17 +1,11 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider, Link, Button, Icon, Text } from '@chakra-ui/react'
+import {
+  IoLogoDribbble,
+} from 'react-icons/io5'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
-import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
-import thumbFourPainters from '../public/images/works/the-four-painters_eyecatch.jpg'
-import thumbMenkiki from '../public/images/works/menkiki_eyecatch.png'
-import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
-import thumbStyly from '../public/images/works/styly_eyecatch.png'
-import thumbPichu2 from '../public/images/works/pichu2_eyecatch.png'
-import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
-import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -22,94 +16,69 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
-            A Markdown note-taking app with 100+ plugins, cross-platform and
-            encrypted data sync support
+          <WorkGridItem id="Dinoclass" title="Dinoclass 🦖 - Founder">
+            An education platform for kids where we provide interactive
+            live classes, similar to Peloton for kids education.
           </WorkGridItem>
+          <Text fontSize={14} mt={2}>
+            👨🏻‍💻 Developed the platform and the marketing site. Using Ruby on rails,
+            javascript, TailwindCss and deployed on Heroku. 
+          </Text>
+          <Text fontSize={14} mt={2}>
+            📲 In the product side I used Amplitude, Segment, Metabase, Hotjar,
+            and other tools to gather the best insights for product development.
+          </Text>
         </Section>
         <Section>
           <WorkGridItem
-            id="walknote"
-            title="walknote"
-            thumbnail={thumbWalknote}
+            id="Airhopping"
+            title="Airhopping 🛫 - Product"
           >
-            Music recommendation app for iOS
+            A Valencia based start-up that connects several destinations 
+            together through the cheapest route.
           </WorkGridItem>
+          <Text fontSize={14} mt={2}>
+            🎨 As a product designer I worked with Figma, Framer and Whimsical
+            to build the product, emails and marketing site designs and UX flow. 
+          </Text>
+          <Text fontSize={14} mt={2}>
+            📲 As a product maker I was in charge of the analytics and user research,
+            using tools as Amplitude, Hotjar, Mode, PopSQL and Gsuite.
+          </Text>
         </Section>
 
         <Section delay={0.1}>
           <WorkGridItem
-            id="fourpainters"
-            title="The four painters"
-            thumbnail={thumbFourPainters}
+            id="Lambda"
+            title="Lambda School 💻 - Team Lead"
           >
-            A video work generated with deep learning, imitating famous four
-            painters like Van Gogh
+            Lambda School is an online coding school where students pay a portion 
+            of their income after they're hired. 
           </WorkGridItem>
+          <Text fontSize={14} mt={2}>
+            💻 As a Team leader in Lambda School my role was to guide a group of 7
+            students. Doing code reviews, one-on-one feedback, resolve conflicts and
+            doing the management between students and Lambda.
+          </Text>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbMenkiki} title="Menkiki">
-            An app that suggests ramen(noodle) shops based on a given photo of
-            the ramen you want to eat
+          <WorkGridItem id="dribble" title="My work on Dribbble">
+            You can find most of my sideprojects and work on Dribbble
+            with the designs I developed for that projects.
           </WorkGridItem>
+            <Link href="https://dribbble.com/borjasoler" target="_blank"> 
+              <Button
+                variant="ghost"
+                my="4"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoLogoDribbble} />}
+              >
+                borjasoler
+              </Button>
+            </Link>
         </Section>
       </SimpleGrid>
-
-      <Section delay={0.2}>
-        <Divider my={6} />
-
-        <Heading as="h3" fontSize={20} mb={4}>
-          Collaborations
-        </Heading>
-      </Section>
-
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.3}>
-          <WorkGridItem
-            id="modetokyo"
-            thumbnail={thumbModeTokyo}
-            title="mode.tokyo"
-          >
-            The mode magazine for understanding to personally enjoy Japan
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.3}>
-          <WorkGridItem id="styly" thumbnail={thumbStyly} title="Styly">
-            A VR Creative tools for fashion brands
-          </WorkGridItem>
-        </Section>
-      </SimpleGrid>
-
-      <Section delay={0.4}>
-        <Divider my={6} />
-
-        <Heading as="h3" fontSize={20} mb={4}>
-          Old works
-        </Heading>
-      </Section>
-
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.5}>
-          <WorkGridItem id="pichu2" thumbnail={thumbPichu2} title="Pichu*Pichu">
-            Twitter client app for iPhone Safari
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.5}>
-          <WorkGridItem
-            id="freedbtagger"
-            thumbnail={thumbFreeDBTagger}
-            title="freeDBTagger"
-          >
-            Automatic audio file tagging tool using FreeDB for Windows
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.6}>
-          <WorkGridItem id="amembo" thumbnail={thumbAmembo} title="Amembo">
-            P2P private file sharing tool with MSN Messenger integration for
-            Windows
-          </WorkGridItem>
-        </Section>
-      </SimpleGrid>
+      <Divider my={6} />
     </Container>
   </Layout>
 )
