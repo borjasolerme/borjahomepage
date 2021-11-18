@@ -52,7 +52,7 @@ export const DribbleGridItem = ({ children, id, title, thumbnail }) => (
           className="grid-item-thumbnail"
           placeholder="blur"
         />
-        <LinkOverlay href={`/works/${id}`}>
+        <LinkOverlay href={`https://dribbble.com/borjasoler`} target="_blank">
           <Text mt={2} fontSize={20}>
             {title}
           </Text>
