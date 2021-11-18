@@ -4,80 +4,80 @@ import {
 } from 'react-icons/io5'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
+import { WorkGridItem, DribbleGridItem } from '../components/grid-item'
+
+import thumbDinoclass from '../public/images/works/dinoclass.png'
+import thumbAirhopping from '../public/images/works/airhopping.png'
+import thumbLambda from '../public/images/works/lambda.png'
+import thumbDribble from '../public/images/works/dribble.png'
+import thumbVirtux from '../public/images/works/virtux.png'
+
 
 
 const Works = () => (
   <Layout title="Works">
     <Container>
-      <Heading as="h3" fontSize={20} mb={4}>
+      <Heading as="h3" fontSize={20} mb={8}>
         Works
+        <Divider mt={4} />
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="Dinoclass" title="Dinoclass 🦖 - Founder">
+          <WorkGridItem id="dinoclass" title="Dinoclass 🦖 - Founder & Product lead" thumbnail={thumbDinoclass}>
             An education platform for kids where we provide interactive
             live classes, similar to Peloton for kids education.
           </WorkGridItem>
-          <Text fontSize={14} mt={2}>
-            👨🏻‍💻 Developed the platform and the marketing site. Using Ruby on rails,
-            javascript, TailwindCss and deployed on Heroku. 
-          </Text>
-          <Text fontSize={14} mt={2}>
-            📲 In the product side I used Amplitude, Segment, Metabase, Hotjar,
-            and other tools to gather the best insights for product development.
-          </Text>
         </Section>
         <Section>
           <WorkGridItem
-            id="Airhopping"
-            title="Airhopping 🛫 - Product"
+            id="airhopping"
+            title="Airhopping 🛫 - Product Designer"
+            thumbnail={thumbAirhopping}
           >
             A Valencia based start-up that connects several destinations 
             together through the cheapest route.
           </WorkGridItem>
-          <Text fontSize={14} mt={2}>
-            🎨 As a product designer I worked with Figma, Framer and Whimsical
-            to build the product, emails and marketing site designs and UX flow. 
-          </Text>
-          <Text fontSize={14} mt={2}>
-            📲 As a product maker I was in charge of the analytics and user research,
-            using tools as Amplitude, Hotjar, Mode, PopSQL and Gsuite.
-          </Text>
         </Section>
 
         <Section delay={0.1}>
           <WorkGridItem
-            id="Lambda"
+            id="lambda"
             title="Lambda School 💻 - Team Lead"
+            thumbnail={thumbLambda}
           >
-            Lambda School is an online coding school where students pay a portion 
+            Lambda School, now Bloomtech is an online coding school where students pay a portion 
             of their income after they're hired. 
           </WorkGridItem>
-          <Text fontSize={14} mt={2}>
-            💻 As a Team leader in Lambda School my role was to guide a group of 7
-            students. Doing code reviews, one-on-one feedback, resolve conflicts and
-            doing the management between students and Lambda.
-          </Text>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="dribble" title="My work on Dribbble">
+          <DribbleGridItem id="dribble" title="My work on Dribbble" thumbnail={thumbDribble}>
             You can find most of my sideprojects and work on Dribbble
             with the designs I developed for that projects.
-          </WorkGridItem>
-            <Link href="https://dribbble.com/borjasoler" target="_blank"> 
-              <Button
-                variant="ghost"
-                my="4"
-                colorScheme="teal"
-                leftIcon={<Icon as={IoLogoDribbble} />}
-              >
-                borjasoler
-              </Button>
-            </Link>
+          </DribbleGridItem>
         </Section>
       </SimpleGrid>
+
+      <Section delay={0.2}>
+          <Divider my={6} />
+
+          <Heading as="h3" fontSize={20} mb={4}>
+            Sideprojects
+          </Heading>
+        </Section>
+        
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <Section delay={0.1}>
+          <WorkGridItem
+            id="virtux"
+            title="Virtux - Product & Design"
+            thumbnail={thumbVirtux}
+          >
+            Virtux was a sideproject were I helped a person from Italy to develop a saas where lawyers could provide legal assistance and have a complete CRM and communication tools with its clients.
+          </WorkGridItem>
+        </Section>
+        </SimpleGrid>
+
       <Divider my={6} />
     </Container>
   </Layout>

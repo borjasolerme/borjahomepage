@@ -30,15 +30,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/posts": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/posts.js"
-    ],
     "/works": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/works.js"
+    ],
+    "/works/lambda": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/works/lambda.js"
+    ],
+    "/works/virtux": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/works/virtux.js"
     ]
   },
   "ampFirstPages": []

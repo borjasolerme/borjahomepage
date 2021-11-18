@@ -10,8 +10,9 @@ import Lambda from '../public/images/contents/Lambda.jpeg'
 const Posts = () => (
   <Layout title="Posts">
     <Container>
-      <Heading as="h3" fontSize={20} mb={4}>
+      <Heading as="h3" fontSize={20} mb={8}>
         ✍️ Posts
+        <Divider mt={4} />
       </Heading>
 
       <Section delay={0.1}>
